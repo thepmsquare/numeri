@@ -2,24 +2,18 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Gilda Display", serif;
+  background-color: var(--red);
+  text-align: center;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.MuiTab-root {
+  color: var(--gold);
 }
-
-* {
-  box-sizing: border-box;
-}
-
 :root {
-	--red: #8e001c;
-	--gold: #ffb300;
+  --red: #8e001c;
+  --gold: #ffb300;
 }
 
 @font-face {
-	font-family: "Gilda Display";
-	src: url("/fonts/Gilda_Display/GildaDisplay-Regular.ttf");
+  font-family: "Gilda Display";
+  src: url("/fonts/Gilda_Display/GildaDisplay-Regular.ttf");
 }
