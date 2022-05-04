@@ -6,12 +6,26 @@ body {
   text-align: center;
 }
 .MuiTab-root,
-.MuiInputLabel-root {
+.MuiInputLabel-root,
+.MuiOutlinedInput-input {
   color: var(--gold);
 }
+.MuiOutlinedInput-input::selection {
+  color: var(--red);
+  background: var(--gold);
+}
+
 .MuiOutlinedInput-notchedOutline,
 .MuiOutlinedInput-notchedOutline:hover {
   border-color: var(--gold) !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 :root {
   --red: #8e001c;
