@@ -5,8 +5,13 @@ body {
   background-color: var(--red);
   text-align: center;
 }
-.MuiTab-root {
+.MuiTab-root,
+.MuiInputLabel-root {
   color: var(--gold);
+}
+.MuiOutlinedInput-notchedOutline,
+.MuiOutlinedInput-notchedOutline:hover {
+  border-color: var(--gold) !important;
 }
 :root {
   --red: #8e001c;

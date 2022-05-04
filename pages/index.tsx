@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <main className={styles.main}>
-        <Typography variant="h1" color={goldColor}>
+        <Typography variant="h1" color={goldColor} className={styles.header}>
           numeri
         </Typography>
         <div className={styles.tabsContainer}>
@@ -36,12 +36,13 @@ export default function Home() {
             textColor="primary"
             variant="fullWidth"
           >
-            <Tab label="Roman to Arabic" />
             <Tab label="Arabic to Roman" />
+            <Tab label="Roman to Arabic" />
           </Tabs>
+
           {selectedTab === 0 && (
             <div className={styles.tab}>
-              <TextField label="Enter Roman Numeral" variant="outlined" />
+              <TextField label="Enter Arabic Numeral" variant="outlined" />
               <Button variant="outlined" color="primary">
                 500
               </Button>
@@ -49,7 +50,7 @@ export default function Home() {
           )}
           {selectedTab === 1 && (
             <div className={styles.tab}>
-              <TextField label="Enter Arabic Numeral" variant="outlined" />
+              <TextField label="Enter Roman Numeral" variant="outlined" />
               <Button variant="outlined" color="primary">
                 500
               </Button>
