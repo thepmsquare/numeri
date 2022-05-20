@@ -5,23 +5,21 @@ import Typography from "@mui/material/Typography";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import TextField from "@mui/material/TextField";
+import Tooltip from "@mui/material/Tooltip";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "../styles/index.module.css";
+
 const goldColor = "#ffb300";
 const theme = createTheme({
   palette: {
     primary: {
       main: goldColor,
     },
-    info: {
-      main: "#0ff",
-    },
   },
   typography: {
     fontFamily: "Gilda Display",
   },
 });
-
 type refType = {
   [key: string]: string;
 };
@@ -67,7 +65,7 @@ const convertToArabic = (roman: string) => {
       }
     }
   }
-  return returnThis;
+  return returnThis === 0 ? "invalid" : returnThis;
 };
 
 export default function Home() {
@@ -126,6 +124,7 @@ export default function Home() {
                   )}
               </div>
             )}
+
             {selectedTab === 1 && (
               <div className={styles.tab}>
                 <TextField
@@ -134,6 +133,16 @@ export default function Home() {
                   value={romanInput}
                   onChange={(e) => setRomanInput(e.target.value.toUpperCase())}
                 />
+                <div className={styles.assistButtonsParent}>
+                  {orderedKeys.map((ele) => {
+                    return (
+                      <Tooltip title={ele} key={ref[ele]}>
+                        <Button>{ref[ele]}</Button>
+                      </Tooltip>
+                    );
+                  })}
+                </div>
+
                 {romanInput && (
                   <Button
                     variant="outlined"
