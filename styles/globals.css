@@ -24,6 +24,11 @@ body {
   color: var(--red) !important;
   font-size: 1rem !important;
 }
+.MuiTooltip-tooltip::selection {
+  background-color: var(--red) !important;
+  color: var(--gold) !important;
+  font-size: 1rem !important;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
