@@ -45,6 +45,9 @@ const orderedKeys = Object.keys(ref)
   .map((ele) => parseInt(ele))
   .sort((a, b) => b - a);
 const convertToRoman = (num: number) => {
+  if (num > 3999) {
+    return "invalid";
+  }
   let returnThis = "";
   for (let i of orderedKeys) {
     while (num >= i) {
