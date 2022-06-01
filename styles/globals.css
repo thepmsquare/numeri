@@ -8,7 +8,7 @@ body {
 .MuiTab-root,
 .MuiInputLabel-root,
 .MuiOutlinedInput-input {
-  color: var(--gold);
+  color: var(--gold) !important;
 }
 .MuiOutlinedInput-input::selection {
   color: var(--red);
@@ -20,9 +20,9 @@ body {
   border-color: var(--gold) !important;
 }
 .MuiTooltip-tooltip {
-  background-color: var(--gold);
-  color: var(--red);
-  font-size: 1rem;
+  background-color: var(--gold) !important;
+  color: var(--red) !important;
+  font-size: 1rem !important;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
