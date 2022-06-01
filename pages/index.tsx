@@ -53,13 +53,14 @@ const convertToRoman = (num: number) => {
 };
 const convertToArabic = (roman: string) => {
   let returnThis = 0;
+  const copyRoman = roman;
   for (let i of orderedKeys) {
     while (roman.startsWith(ref[i])) {
       roman = roman.slice(ref[i].length);
       returnThis += i;
     }
   }
-  if (returnThis === 0 || roman !== convertToRoman(returnThis)) {
+  if (returnThis === 0 || copyRoman !== convertToRoman(returnThis)) {
     return "invalid";
   }
   return returnThis;
