@@ -43,6 +43,6 @@ input[type="number"] {
 }
 
 @font-face {
-  font-family: "Gilda Display";
-  src: url("/fonts/Gilda_Display/GildaDisplay-Regular.ttf");
+  font-family: "Roboto Slab";
+  src: url("/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
 }

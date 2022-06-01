@@ -20,7 +20,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Gilda Display",
+    fontFamily: "Roboto Slab",
   },
 });
 type refType = {
