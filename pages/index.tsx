@@ -134,7 +134,7 @@ export default function Home() {
                   {orderedKeys.map((ele) => {
                     return (
                       <Tooltip title={ele} key={ref[ele]}>
-                        <Button>{ref[ele]}</Button>
+                        <Button onClick={()=> setRomanInput(romanInput+ref[ele])}>{ref[ele]}</Button>
                       </Tooltip>
                     );
                   })}
