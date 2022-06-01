@@ -54,18 +54,15 @@ const convertToRoman = (num: number) => {
 const convertToArabic = (roman: string) => {
   let returnThis = 0;
   for (let i of orderedKeys) {
-    let breakVariable = 0;
     while (roman.startsWith(ref[i])) {
-      if (breakVariable < 3) {
         roman = roman.slice(ref[i].length);
-        breakVariable += 1;
         returnThis += i;
-      } else {
-        return "invalid";
-      }
     }
   }
-  return returnThis === 0 ? "invalid" : returnThis;
+  if (returnThis === 0 || (roman !== convertToRoman(returnThis))){
+    returnThis = "invalid";
+  }
+  return returnThis;
 };
 
 export default function Home() {
