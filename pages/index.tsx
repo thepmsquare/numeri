@@ -60,7 +60,7 @@ const convertToArabic = (roman: string) => {
     }
   }
   if (returnThis === 0 || (roman !== convertToRoman(returnThis))){
-    returnThis = "invalid";
+    return "invalid";
   }
   return returnThis;
 };
