@@ -6,8 +6,11 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import TextField from "@mui/material/TextField";
 import Tooltip from "@mui/material/Tooltip";
+import InputAdornment from "@mui/material/InputAdornment";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ClearIcon from "@mui/icons-material/Clear";
 import styles from "../styles/index.module.css";
+import { IconButton } from "@mui/material";
 
 const goldColor = "#ffb300";
 const theme = createTheme({
@@ -94,7 +97,21 @@ export default function Home() {
                   label="Enter Arabic Numeral"
                   variant="outlined"
                   type="number"
-                  InputProps={{ inputProps: { min: 1, max: 3999 } }}
+                  InputProps={{
+                    inputProps: { min: 1, max: 3999 },
+                    endAdornment: arabicInput && (
+                      <InputAdornment position="end">
+                        <IconButton
+                          color="primary"
+                          onClick={() => {
+                            setArabicInput("");
+                          }}
+                        >
+                          <ClearIcon />
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
                   value={arabicInput}
                   onChange={(e) => setArabicInput(e.target.value)}
                 />
@@ -129,6 +146,20 @@ export default function Home() {
                   label="Enter Roman Numeral"
                   variant="outlined"
                   value={romanInput}
+                  InputProps={{
+                    endAdornment: romanInput && (
+                      <InputAdornment position="end">
+                        <IconButton
+                          color="primary"
+                          onClick={() => {
+                            setRomanInput("");
+                          }}
+                        >
+                          <ClearIcon />
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
                   onChange={(e) => setRomanInput(e.target.value.toUpperCase())}
                 />
                 <div className={styles.assistButtonsParent}>
