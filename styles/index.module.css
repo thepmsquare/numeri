@@ -26,12 +26,22 @@
   gap: 1rem;
   flex-grow: 1;
 }
-
+.triviaCard {
+  width: 90%;
+  margin: 0 auto 2rem auto;
+  height: 20%;
+  overflow: auto;
+}
 @media screen and (max-width: 810px) {
   .assistButtonsParent {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+@media screen and (max-height: 666px) {
+  .triviaCard {
+    display: none;
   }
 }

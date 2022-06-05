@@ -7,16 +7,20 @@ import Tab from "@mui/material/Tab";
 import TextField from "@mui/material/TextField";
 import Tooltip from "@mui/material/Tooltip";
 import InputAdornment from "@mui/material/InputAdornment";
+import Card from "@mui/material/Card";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ClearIcon from "@mui/icons-material/Clear";
 import styles from "../styles/index.module.css";
-import { IconButton } from "@mui/material";
+import { CardContent, IconButton } from "@mui/material";
 
 const goldColor = "#ffb300";
 const theme = createTheme({
   palette: {
     primary: {
       main: goldColor,
+    },
+    background: {
+      paper: goldColor,
     },
   },
   typography: {
@@ -195,6 +199,16 @@ export default function Home() {
               </div>
             )}
           </div>
+          <Card variant="outlined" className={styles.triviaCard}>
+            <CardContent>
+              <Typography>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                repellendus, totam nesciunt neque corrupti suscipit voluptatem
+                porro! Voluptas soluta in ad vitae molestiae id voluptatum
+                dolore itaque. Impedit, magni fugiat?
+              </Typography>
+            </CardContent>
+          </Card>
         </main>
       </ThemeProvider>
     </React.StrictMode>
