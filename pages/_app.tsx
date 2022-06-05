@@ -16,7 +16,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Utility for conversion between roman and arabic numerals."
         />
-        <meta name="keywords" content="roman, arabic, numerals, conversion" />
+        <meta
+          name="keywords"
+          content="roman, arabic, numerals, conversion, numeri, thepmsquare, parth"
+        />
+        <meta
+          name="google-site-verification"
+          content="FwX_gOF89TmJvAE6nFZ7DrpRMHTQBTs_0XsuK6xPMyU"
+        />
         <title>numeri</title>
 
         <link rel="manifest" href="/manifest.json" />
