@@ -11,7 +11,7 @@ body {
   color: var(--gold) !important;
 }
 .MuiLinearProgress-root {
-  background-color: var(--red);
+  background-color: var(--red) !important;
 }
 .MuiOutlinedInput-input::selection {
   color: var(--red);

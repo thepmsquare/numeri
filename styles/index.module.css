@@ -31,6 +31,8 @@
   margin: 0 auto 2rem auto;
   height: 20%;
   overflow: auto;
+  display: flex;
+  align-items: center;
 }
 .triviaCardText::selection {
   color: var(--gold);

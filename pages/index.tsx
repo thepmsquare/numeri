@@ -15,7 +15,7 @@ import Fade from "@mui/material/Fade";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ClearIcon from "@mui/icons-material/Clear";
 import styles from "../styles/index.module.css";
-
+import trivia from "../utils/trivia.json";
 const goldColor = "#ffb300";
 const redColor = "#8e001c";
 const theme = createTheme({
@@ -89,10 +89,11 @@ export default function Home() {
   const [romanInput, setRomanInput] = useState("");
   const [triviaNumber, setTriviaNumber] = useState(0);
   const [triviaProgress, setTriviaProgress] = useState(0);
-  const maxTriviaNumber = 5;
-  const triviaProgressIncrement = 5;
-  const triviaProgressInterval = 500;
+
   useEffect(() => {
+    const maxTriviaNumber = trivia.length - 1;
+    const triviaProgressIncrement = 5;
+    const triviaProgressInterval = 500;
     const progressInterval = setInterval(() => {
       setTriviaProgress((oldProgessValue) => {
         if (oldProgessValue === 100) {
@@ -235,7 +236,8 @@ export default function Home() {
             <CardContent>
               <Fade in={triviaProgress != 0} mountOnEnter unmountOnExit>
                 <Typography className={styles.triviaCardText}>
-                  {triviaProgress != 0 && triviaNumber}
+                  {triviaProgress != 0 &&
+                    trivia?.find((ele) => ele.order === triviaNumber + 1)?.text}
                 </Typography>
               </Fade>
             </CardContent>

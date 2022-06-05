@@ -1,0 +1,42 @@
+[
+  {
+    "order": 1,
+    "text": "The Roman numerals are derived from the Etruscan number symbols: '𐌠', '𐌡', '𐌢', '𐌣', and '𐌟' for 1, 5, 10, 50, and 100."
+  },
+  {
+    "order": 2,
+    "text": "From the 14th century on, Roman numerals began to be replaced by Arabic numerals."
+  },
+  {
+    "order": 3,
+    "text": "The number zero was missing from the classical Roman numeral system and was later represented by nulla / N."
+  },
+  {
+    "order": 4,
+    "text": "The base 'Roman fraction' is S, indicating 1/2."
+  },
+  {
+    "order": 5,
+    "text": "Apostrophus, Vinculum and other extension systems designed to indicate larger numbers were never standardised."
+  },
+  {
+    "order": 6,
+    "text": "The largest number that can be represented in this notation is 3,999 (MMMCMXCIX)"
+  },
+  {
+    "order": 7,
+    "text": "Subtractive notation is when the first symbol is subtracted from the larger one. Example: IV is 5 - 1 = 4."
+  },
+  {
+    "order": 8,
+    "text": "These are the only subtractive forms in standard use:4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD), 900 (CM)."
+  },
+  {
+    "order": 9,
+    "text": "Decimal system  was developed centuries before the Arabic numerals in the Indian subcontinent, using other symbols."
+  },
+  {
+    "order": 10,
+    "text": "The Number Forms block of the Unicode character set has a number of Roman numeral symbols in the range of code points from U+2160 to U+2188."
+  }
+]
