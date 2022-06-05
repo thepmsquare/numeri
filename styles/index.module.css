@@ -32,6 +32,10 @@
   height: 20%;
   overflow: auto;
 }
+.triviaCardText::selection {
+  color: var(--gold);
+  background: var(--red);
+}
 @media screen and (max-width: 810px) {
   .assistButtonsParent {
     width: 100%;

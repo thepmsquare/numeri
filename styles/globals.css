@@ -10,6 +10,9 @@ body {
 .MuiOutlinedInput-input {
   color: var(--gold) !important;
 }
+.MuiLinearProgress-root {
+  background-color: var(--red);
+}
 .MuiOutlinedInput-input::selection {
   color: var(--red);
   background: var(--gold);

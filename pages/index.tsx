@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Tabs from "@mui/material/Tabs";
@@ -8,16 +8,23 @@ import TextField from "@mui/material/TextField";
 import Tooltip from "@mui/material/Tooltip";
 import InputAdornment from "@mui/material/InputAdornment";
 import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import IconButton from "@mui/material/IconButton";
+import LinearProgress from "@mui/material/LinearProgress";
+import Fade from "@mui/material/Fade";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ClearIcon from "@mui/icons-material/Clear";
 import styles from "../styles/index.module.css";
-import { CardContent, IconButton } from "@mui/material";
 
 const goldColor = "#ffb300";
+const redColor = "#8e001c";
 const theme = createTheme({
   palette: {
     primary: {
       main: goldColor,
+    },
+    text: {
+      primary: redColor,
     },
     background: {
       paper: goldColor,
@@ -80,6 +87,30 @@ export default function Home() {
   const [selectedTab, setSelectedTab] = useState(0);
   const [arabicInput, setArabicInput] = useState("");
   const [romanInput, setRomanInput] = useState("");
+  const [triviaNumber, setTriviaNumber] = useState(0);
+  const [triviaProgress, setTriviaProgress] = useState(0);
+  const maxTriviaNumber = 5;
+  const triviaProgressIncrement = 5;
+  const triviaProgressInterval = 500;
+  useEffect(() => {
+    const progressInterval = setInterval(() => {
+      setTriviaProgress((oldProgessValue) => {
+        if (oldProgessValue === 100) {
+          setTriviaNumber((oldNumValue) => {
+            if (oldNumValue === maxTriviaNumber) {
+              return 0;
+            } else {
+              return oldNumValue + 1;
+            }
+          });
+          return 0;
+        } else {
+          return oldProgessValue + triviaProgressIncrement;
+        }
+      });
+      return () => clearInterval(progressInterval);
+    }, triviaProgressInterval);
+  }, []);
   return (
     <React.StrictMode>
       <ThemeProvider theme={theme}>
@@ -199,14 +230,14 @@ export default function Home() {
               </div>
             )}
           </div>
-          <Card variant="outlined" className={styles.triviaCard}>
+          <Card className={styles.triviaCard}>
+            <LinearProgress variant="determinate" value={triviaProgress} />
             <CardContent>
-              <Typography>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                repellendus, totam nesciunt neque corrupti suscipit voluptatem
-                porro! Voluptas soluta in ad vitae molestiae id voluptatum
-                dolore itaque. Impedit, magni fugiat?
-              </Typography>
+              <Fade in={triviaProgress != 0} mountOnEnter unmountOnExit>
+                <Typography className={styles.triviaCardText}>
+                  {triviaProgress != 0 && triviaNumber}
+                </Typography>
+              </Fade>
             </CardContent>
           </Card>
         </main>
