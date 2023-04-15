@@ -22,7 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           name="google-site-verification"
-          content="FwX_gOF89TmJvAE6nFZ7DrpRMHTQBTs_0XsuK6xPMyU"
+          content="tnYl4to99X5gJknMFYfdf1iX8fhDn7uq3CXFhonw1BA"
         />
         <title>numeri</title>
         <link rel="icon" href="/numeri/favicon.ico" />
