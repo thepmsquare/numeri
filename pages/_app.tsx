@@ -25,8 +25,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           content="FwX_gOF89TmJvAE6nFZ7DrpRMHTQBTs_0XsuK6xPMyU"
         />
         <title>numeri</title>
-
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/numeri/favicon.ico" />
+        <link rel="manifest" href="/numeri/manifest.json" />
         <meta name="theme-color" content="#ffb300" />
       </Head>
       <Component {...pageProps} />
